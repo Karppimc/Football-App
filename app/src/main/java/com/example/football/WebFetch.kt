@@ -47,14 +47,5 @@ class MatchViewModel : ViewModel() {
     }
 }
 
-@Composable
-fun MatchDetails(eventDate: String, homeTeamName: String, awayTeamName: String) {
-    Column(modifier = Modifier.fillMaxSize()) {
-        Text(text = "Date: $eventDate")
-        Text(text = "Home: $homeTeamName")
-        Text(text = "Away: $awayTeamName")
-    }
-}
-
 
 data class MatchDetail(val eventDate: String, val homeTeamName: String, val awayTeamName: String)
