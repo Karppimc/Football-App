@@ -1,48 +1,23 @@
 package com.example.football
-import MatchViewModel
+
+import MyApp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.lifecycle.viewmodel.compose.viewModel
-
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApp()
+            val navController = rememberNavController()
+            NavHost(navController = navController, startDestination = "myApp") {
+                composable("myApp") { MyApp(navController) }
+                // Pass navController to OtherScreen
+                composable("otherScreen") { OtherScreen(navController) }
+            }
         }
     }
 }
-
-@Composable
-fun MyApp(viewModel: MatchViewModel = viewModel()) {
-    // Observe the matchDetails LiveData
-    val matchDetails by viewModel.matchDetails.observeAsState(initial = emptyList())
-    
-    // Use LazyColumn to display the list
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(matchDetails) { matchDetail ->
-            MatchDetailItem(matchDetail)
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-

@@ -20,6 +20,7 @@ fun MatchDetailItem(matchDetail: MatchDetail) {
         Text(text = " ${matchDetail.awayTeamName}", style = typography.subtitle1)
     }
 }
+
 val typography = Typography(
     h6 = TextStyle(
         fontWeight = FontWeight.Medium,
