@@ -1,5 +1,6 @@
 package com.example.football
 
+import MapScreen
 import MyApp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
             NavHost(navController = navController, startDestination = "myApp") {
                 composable("myApp") { MyApp(navController) }
                 // Pass navController to OtherScreen
-                composable("otherScreen") { OtherScreen(navController) }
+                composable("mapScreen") { MapScreen(navController) }
             }
         }
     }

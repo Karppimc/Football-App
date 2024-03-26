@@ -36,7 +36,7 @@ fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchView
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(
-            onClick = { navController.navigate("otherScreen") },
+            onClick = { navController.navigate("mapScreen") },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp)
