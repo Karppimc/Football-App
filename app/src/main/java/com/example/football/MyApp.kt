@@ -26,6 +26,15 @@ fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchView
         ) {
             Text(text = "Ilves Tampere Homegames 2024", style = MaterialTheme.typography.h5)
         }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 8.dp)
+        ) {
+            Text(text = "Date", modifier = Modifier.weight(2f), style = MaterialTheme.typography.subtitle1)
+            Text(text = "Teams", modifier = Modifier.weight(3f), style = MaterialTheme.typography.subtitle1)
+            Text(text = "Score", modifier = Modifier.weight(1f), style = MaterialTheme.typography.subtitle1)
+        }
         LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
             items(matchDetails) { matchDetail ->
                 MatchDetailItem(matchDetail)

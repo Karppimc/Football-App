@@ -32,13 +32,14 @@ class MatchViewModel : ViewModel() {
             for (i in 0 until fixtures.length()) {
                 val fixture = fixtures.getJSONObject(i)
                 val eventDateWithTime = fixture.getString("event_date")
-                // Extract only the date part (YYYY-MM-DD)
-                val eventDate = eventDateWithTime.substring(0, 10)
+                val eventDate = eventDateWithTime.substring(8, 10) + "." + eventDateWithTime.substring(5, 7)
                 val homeTeamName = fixture.getJSONObject("homeTeam").getString("team_name")
                 val awayTeamName = fixture.getJSONObject("awayTeam").getString("team_name")
+                val goalsHomeTeam = fixture.optInt("goalsHomeTeam", -1) // Use optInt to handle null and provide a default value
+                val goalsAwayTeam = fixture.optInt("goalsAwayTeam", -1) // Use optInt to handle null and provide a default value
 
                 if (homeTeamName == "Ilves Tampere") {
-                    matchDetailsList.add(MatchDetail(eventDate, homeTeamName, awayTeamName))
+                    matchDetailsList.add(MatchDetail(eventDate, homeTeamName, awayTeamName, goalsHomeTeam.takeIf { it >= 0 }, goalsAwayTeam.takeIf { it >= 0 }))
                 }
             }
         }
@@ -48,4 +49,11 @@ class MatchViewModel : ViewModel() {
 }
 
 
-data class MatchDetail(val eventDate: String, val homeTeamName: String, val awayTeamName: String)
+data class MatchDetail(
+    val eventDate: String,
+    val homeTeamName: String,
+    val awayTeamName: String,
+    val goalsHomeTeam: Int?,
+    val goalsAwayTeam: Int?
+)
+
