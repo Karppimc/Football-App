@@ -21,7 +21,7 @@ fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchView
     val matchDetails by viewModel.matchDetails.observeAsState(initial = emptyList())
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // Use LazyColumn to display the list
+
         Box(
 
         ) {
@@ -44,7 +44,7 @@ fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchView
             }
         }
 
-        // Space for the button, making sure it's always at the bottom
+
         Spacer(modifier = Modifier.height(16.dp))
 
         Button(

@@ -25,8 +25,8 @@ fun MatchDetailItem(matchDetail: MatchDetail) {
         Text(
             text = "${matchDetail.eventDate}",
             modifier = Modifier
-                .weight(2f) // Adjust weight to distribute space evenly
-                .padding(end = 8.dp), // Add padding for spacing between elements
+                .weight(2f)
+                .padding(end = 8.dp),
             style = typography.h6
         )
         Column(
@@ -46,7 +46,7 @@ fun MatchDetailItem(matchDetail: MatchDetail) {
         }
         Column(
             modifier = Modifier
-                .weight(1f) // Adjust weight to distribute space evenly
+                .weight(1f)
                 .padding(start = 8.dp),
 
         ) {
