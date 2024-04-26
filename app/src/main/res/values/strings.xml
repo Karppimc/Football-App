@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Football</string>
+    <string name="back_to_homegames">Back to Homegames</string>
+    <string name="ilves_tampere_homegames_2024">Ilves Tampere Homegames 2024</string>
+    <string name="date">Date</string>
+    <string name="teams">Teams</string>
+    <string name="score">Score</string>
+    <string name="where_to_watch">Where to watch</string>
+
 </resources>

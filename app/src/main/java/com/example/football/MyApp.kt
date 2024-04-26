@@ -8,9 +8,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.football.Header
 import com.example.football.MatchDetailItem
+import com.example.football.R
 
 @Composable
 fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchViewModel = viewModel()) {
@@ -20,22 +23,22 @@ fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchView
     Column(modifier = Modifier.fillMaxSize()) {
         // Use LazyColumn to display the list
         Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp)
+
         ) {
-            Text(text = "Ilves Tampere Homegames 2024", style = MaterialTheme.typography.h5)
+            Header(text = stringResource(R.string.ilves_tampere_homegames_2024))
         }
         Row(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 8.dp)
         ) {
-            Text(text = "Date", modifier = Modifier.weight(2f), style = MaterialTheme.typography.subtitle1)
-            Text(text = "Teams", modifier = Modifier.weight(3f), style = MaterialTheme.typography.subtitle1)
-            Text(text = "Score", modifier = Modifier.weight(1f), style = MaterialTheme.typography.subtitle1)
+            Text(text = stringResource(R.string.date), modifier = Modifier.weight(2f), style = MaterialTheme.typography.subtitle1)
+            Text(text = stringResource(R.string.teams), modifier = Modifier.weight(3f), style = MaterialTheme.typography.subtitle1)
+            Text(text = stringResource(R.string.score), modifier = Modifier.weight(1f), style = MaterialTheme.typography.subtitle1)
         }
-        LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
+        LazyColumn(modifier = Modifier
+            .weight(1f)
+            .fillMaxWidth()) {
             items(matchDetails) { matchDetail ->
                 MatchDetailItem(matchDetail)
             }
@@ -50,7 +53,7 @@ fun MyApp(navController: androidx.navigation.NavController, viewModel: MatchView
                 .fillMaxWidth()
                 .padding(16.dp)
         ) {
-            Text("Where to watch")
+            Text(stringResource(R.string.where_to_watch))
         }
     }
 }

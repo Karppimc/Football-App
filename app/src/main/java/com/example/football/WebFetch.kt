@@ -36,7 +36,7 @@ class MatchViewModel : ViewModel() {
                 val homeTeamName = fixture.getJSONObject("homeTeam").getString("team_name")
                 val awayTeamName = fixture.getJSONObject("awayTeam").getString("team_name")
                 val goalsHomeTeam = fixture.optInt("goalsHomeTeam", -1) // Use optInt to handle null and provide a default value
-                val goalsAwayTeam = fixture.optInt("goalsAwayTeam", -1) // Use optInt to handle null and provide a default value
+                val goalsAwayTeam = fixture.optInt("goalsAwayTeam", -1)
 
                 if (homeTeamName == "Ilves Tampere") {
                     matchDetailsList.add(MatchDetail(eventDate, homeTeamName, awayTeamName, goalsHomeTeam.takeIf { it >= 0 }, goalsAwayTeam.takeIf { it >= 0 }))

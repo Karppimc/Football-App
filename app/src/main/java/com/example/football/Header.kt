@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun Header(text:String){
     Text(text = text,
-        fontSize = 55.sp,
+        fontSize = 25.sp,
         textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()

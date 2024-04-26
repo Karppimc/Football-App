@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jalkapallo</string>
+    <string name="back_to_homegames">Takaisin Kotipeleihin</string>
+    <string name="ilves_tampere_homegames_2024">Ilves Tampere Kotipelit 2024</string>
+    <string name="date">Päivämäärä</string>
+    <string name="teams">Joukkueet</string>
+    <string name="score">Tulos</string>
+    <string name="where_to_watch">Missä katsoa</string>
+</resources>
