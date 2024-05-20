@@ -8,6 +8,7 @@ App is done in Android Studio with Kotlin
 - Fetches json data from web and parces it to the screen (Shows Ilves Jalkapallo Homegames)
 - Map feature shows where you can go and watch the match. (Shows Tammela Stadium)
 - If you press the pin in the map you can see what it points at (Says Tammela Stadium) and you can open maps that shows route from your current location to the stadium
+- All of the text has been localized with English as default and Finnish if user has that set up as their main language
 
 
 ## Result
