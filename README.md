@@ -12,8 +12,10 @@ App is done in Android Studio and Codelanguage is Kotlin
 ## Result
 
 - 1st screen:
+  
   ![image](https://github.com/Karppimc/Football-App/assets/54446639/78384164-8da6-4ff5-bcf2-baa65219d422)
 
 - 2nd screen
+  
 ![image](https://github.com/Karppimc/Football-App/assets/54446639/36e60367-98ba-465f-a00d-474b5ad1229d)
 
