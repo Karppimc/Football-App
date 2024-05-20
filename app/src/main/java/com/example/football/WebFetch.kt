@@ -16,7 +16,7 @@ class MatchViewModel : ViewModel() {
         val request = Request.Builder()
             .url("https://api-football-v1.p.rapidapi.com/v2/fixtures/team/1163/5993?timezone=Europe%2FLondon")
             .get()
-            .addHeader("X-RapidAPI-Key", "76ee0be15fmsh80b08c273cf81eap1713cfjsn01ad4da05175")
+            .addHeader("X-RapidAPI-Key", "API_KEY_HERE")
             .addHeader("X-RapidAPI-Host", "api-football-v1.p.rapidapi.com")
             .build()
 
